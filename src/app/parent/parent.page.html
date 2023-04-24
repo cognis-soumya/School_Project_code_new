@@ -1,0 +1,196 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title></ion-title>
+        <ion-buttons slot="start">
+            <ion-menu-button menu="main-menu"></ion-menu-button>
+        </ion-buttons>
+
+        <ion-buttons slot="end">
+            <ion-button (click)="openPopover($event)">
+                <ion-icon slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div>
+        <ion-row class="school_logo">
+            <ion-col>
+                <img src="assets/img/dashboard/school_logo.png">
+                <h1>Global School</h1>
+                <p></p>
+            </ion-col>
+        </ion-row>
+    </div>
+    <ion-grid>
+        <ion-row>
+            <!-- class="container" -->
+            <ion-col class="background_child_info" col-4>
+                <div class="container" (click)="childinfo()">
+                    <img src="assets/img/dashboard/children_info.png">
+                    <p>Child Info</p>
+                </div>
+            </ion-col>
+            <ion-col class="background_holiday" col-4>
+                <div class="container" (click)="holidayList()">
+                    <img src="assets/img/dashboard/holiday.png">
+                    <p>Holiday </p>
+                </div>
+            </ion-col>
+            <ion-col class="background_attendence" col-4>
+                <div class="container" (click)="examSchedule()">
+                    <img src="assets/img/dashboard/exam_schedule.png ">
+                    <p>Exam Table</p>
+                </div>
+            </ion-col>
+
+        </ion-row>
+        <ion-row>
+            <ion-col class="background_assignment" col-4>
+                <div class="container" (click)=" message()">
+                    <img src="assets/img/dashboard/circular.png ">
+                    <p>Circular</p>
+                </div>
+            </ion-col>
+
+            <ion-col class="background_leaves" col-4>
+                <div class="container" (click)="leaves()">
+                    <img src="assets/img/dashboard/leave.png ">
+                    <p>Leave</p>
+                </div>
+            </ion-col>
+            <ion-col class="background_assignment" col-4>
+                <div class="container" (click)="assignments()">
+                    <img src="assets/img/dashboard/assignments.png ">
+                    <p>Assignment</p>
+                </div>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col class="background_assignment" col-4>
+                <div class="container" (click)="feedetails()">
+                    <img src="assets/img/dashboard/fee_details.png">
+                    <p>Fee Details</p>
+                </div>
+            </ion-col>
+
+
+            <ion-col class="background_syllabus" col-4>
+                <div class="container" (click)="examresult()">
+                    <img src="assets/img/dashboard/exam_results.png ">
+                    <p>Exam&nbsp;Result</p>
+                </div>
+            </ion-col>
+
+            <ion-col class="background_attendence" col-4>
+                <div class="container" (click)="syllabus()">
+                    <img src="assets/img/dashboard/syllabus.png">
+                    <p>Sylabus</p>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <!-- background_syllabus -->
+            <ion-col class="background_syllabus" col-4>
+                <div class="container" (click)="dailyClassSchedule()">
+                    <img src="assets/img/dashboard/daily_class.png ">
+                    <p>Daily&nbsp;class</p>
+                </div>
+            </ion-col>
+            <ion-col class="background_attendence" col-4>
+                <div class="container" (click)="attendance()">
+                    <img src="assets/img/dashboard/attendance.png ">
+                    <p>Attendance</p>
+                </div>
+            </ion-col>
+            <ion-col class="background_attendence" col-4>
+                <div class="container" (click)="gallery()">
+                    <img src="assets/img/dashboard/gallery.png ">
+                    <p>Gallery</p>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <!-- class="col" -->
+
+    <!-- <ion-grid>
+      <ion-row>
+          <ion-col col-3>
+              <div class="containers " (click)="message()">
+                  <img src="assets/img/msg2.png">
+                  <p>Message</p>
+              </div>
+          </ion-col>
+          <ion-col col-3>
+              <div class="containers " (click)="syllabus()">
+                  <img src="assets/img/clas12.png">
+                  <p>Sylabus</p>
+              </div>
+          </ion-col>
+          <ion-col col-3>
+              <div class="containers " (click)="attendance()">
+                  <img src="assets/img/att1.png ">
+                  <p>Attendance</p>
+              </div>
+          </ion-col>
+          <ion-col col-3>
+              <div class="containers " (click)="assignments()">
+                  <img src="assets/img/assgn111.png ">
+                  <p>Assignments </p>
+              </div>
+          </ion-col>
+      </ion-row>
+  </ion-grid>
+  <ion-grid>
+      <ion-row>
+          <ion-col col-3>
+              <div class="containers2" (click)="holidayList()">
+                  <img src="assets/img/holy11.png">
+                  <p>Holiday </p>
+              </div>
+          </ion-col>
+          <ion-col col-3>
+              <div class="containers2 " (click)="syllabus()">
+                  <img src="assets/img/syll111.png ">
+                  <p>Syllabus </p>
+              </div>
+          </ion-col>
+          <ion-col col-3>
+              <div class="containers2 " (click)="Leaves()">
+                  <img src="assets/img/leave3.png">
+                  <p>Leaves</p>
+              </div>
+          </ion-col>
+          <ion-col col-3>
+              <div class="containers2 " (click)="parentTeacherCommunication()">
+                  <img src="assets/img/parent11.png ">
+                  <p>Chart</p>
+              </div>
+          </ion-col>
+
+
+      </ion-row>
+  </ion-grid> -->
+
+</ion-content>
+<!-- <ion-footer slot="bottom">
+  <ion-toolbar>
+      <ion-tab-bar>
+          <ion-tab-button tab="Home">
+              <ion-icon name="home" color="primary"></ion-icon>
+              <ion-label>Home</ion-label>
+          </ion-tab-button>
+          <ion-tab-button tab="inbox">
+              <ion-icon name="mail" color="primary"></ion-icon>
+              <ion-label>Message</ion-label>
+          </ion-tab-button>
+          <ion-tab-button tab="Account">
+              <ion-icon name="person" color="primary"></ion-icon>
+              <ion-label>Account</ion-label>
+          </ion-tab-button>
+      </ion-tab-bar>
+  </ion-toolbar>
+</ion-footer> -->

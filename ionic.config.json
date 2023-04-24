@@ -1,0 +1,7 @@
+{
+  "name": "global_school",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

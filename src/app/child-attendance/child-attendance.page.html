@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-button color="light" (click)="goBack()">
+              <ion-icon name="arrow-back"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+      <ion-title> Child Attendance</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-item>
+      <ion-label>Child Name</ion-label>
+      <ion-note slot="end" color="primary">{{childName}}</ion-note>
+      <!-- <ion-select okText="Ok" cancelText="Dismiss" (ionChange)="selectChild($event)">
+          <ion-select-option *ngFor="let child of childDataArr">{{child.getStudentName()}}</ion-select-option>
+      </ion-select> -->
+  </ion-item>
+
+  <ion-item>
+      <ion-label>From date</ion-label>
+      <ion-icon name="calendar" color="primary" slot="end"></ion-icon>
+      <ion-datetime displayFormat="DD-MM-YYYY" [(ngModel)]="fromDate" (ionChange)="fromDateChange(fromDate)"></ion-datetime>
+  </ion-item>
+  <ion-item>
+      <ion-label>To date</ion-label>
+      <ion-icon name="calendar" color="primary" slot="end"></ion-icon>
+      <ion-datetime displayFormat="DD-MM-YYYY" [(ngModel)]="toDate" (ionChange)="toDateChange(toDate)"></ion-datetime>
+  </ion-item>
+
+  <ion-card class="attendanceFont">
+      <ion-row>
+          <ion-col>
+              <ion-item>
+                  <ion-label >{{"Totaldays - "+ totalDay}}</ion-label>
+                  <ion-label >{{" Present - "+ totalPresent}}</ion-label>
+                  <ion-label >{{"Absent - "+ totalAbsent}}</ion-label>
+                </ion-item>
+          </ion-col>
+      </ion-row>
+  </ion-card>
+  <ion-list *ngFor="let attendance of attendanceArr">
+                  <ion-card>
+                  <ion-item>
+                      <ion-icon name="person-circle-outline" color="primary" slot="start"></ion-icon>
+                      <ion-label color="primary">{{attendance.getDate()}}</ion-label>
+                      <ion-label color="primary" slot="end">{{attendance.getAttendanceStatus()}}</ion-label>
+                    </ion-item>
+                  </ion-card> 
+   </ion-list>
+</ion-content>

@@ -1,0 +1,98 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-button color="light" (click)="goBack()">
+                <ion-icon name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>Fee Details</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-item>
+        <ion-label>Child Name</ion-label>
+        <ion-note slot="end" color="primary">{{childName}}</ion-note>
+        <!-- <ion-select okText="Ok" cancelText="Cancel" (ionChange)="selectChild($event)">
+            <ion-select-option *ngFor="let child of childDataArr">{{child.getStudentName()}}</ion-select-option>
+        </ion-select> -->
+    </ion-item>
+    <!-- <ion-item>
+        <ion-label>Month Name</ion-label>
+        <ion-select okText="Ok" cancelText="Cancel" (ionChange)="selectMonth($event)">
+            <ion-select-option *ngFor="let month of months">{{month.monthName}}</ion-select-option>
+        </ion-select>
+    </ion-item> -->
+    <ion-item-group>
+        <ion-item-divider>
+            <ion-label color="primary" style=" font-size: 18px;"> Details of Payment</ion-label>
+        </ion-item-divider>
+
+        <ion-item>
+            <ion-label>Paid Amount</ion-label>
+            <ion-note slot="end" color="primary">{{paidAmount}}</ion-note>
+        </ion-item>
+        <ion-item>
+            <ion-label>Due Amount</ion-label>
+            <ion-note slot="end" color="primary">{{dueAmount}}</ion-note>
+        </ion-item>
+        <!-- <ion-item>
+          <ion-label>Fee Receipt</ion-label>
+          <ion-note slot="end" color="primary">40,000</ion-note>
+      </ion-item> -->
+        <ion-item>
+            <ion-label>Total Fee</ion-label>
+            <ion-note slot="end" color="primary">{{totalFee}}</ion-note>
+        </ion-item>
+        <ion-item>
+            <ion-label>Payment Final Date</ion-label>
+            <ion-note slot="end" color="tertiary">{{finalDate}}</ion-note>
+        </ion-item>
+
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider>
+            <ion-label color="primary" style=" font-size: 18px;">Fees Structure</ion-label>
+        </ion-item-divider>
+
+        <ion-item *ngFor="let feeMaster of masterFeeList">
+            <ion-label>{{feeMaster.nameOfFee}}</ion-label>
+            <ion-note slot="end" color="primary">{{feeMaster.amountOfFee}}</ion-note>
+        </ion-item>
+        <!-- <ion-item>
+            <ion-label> Transport Fee</ion-label>
+            <ion-note slot="end" color="primary">{{transportFee}}</ion-note>
+        </ion-item>
+        <ion-item>
+            <ion-label>Registration Fee</ion-label>
+            <ion-note slot="end" color="primary">{{registrationFee}}</ion-note>
+        </ion-item>
+        <ion-item>
+            <ion-label>Sports fee</ion-label>
+            <ion-note slot="end" color="primary">{{sportFee}}</ion-note>
+        </ion-item>
+        <ion-item>
+            <ion-label>Exam Fee</ion-label>
+            <ion-note slot="end" color="primary">{{examFee}}</ion-note>
+        </ion-item>
+        <ion-item>
+            <ion-label>Tour Fee</ion-label>
+            <ion-note slot="end" color="primary">{{tourFee}}</ion-note>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Miscellaneous </ion-label>
+            <ion-note slot="end" color="primary">{{miscelenious}}</ion-note>
+        </ion-item> -->
+    </ion-item-group>
+    <!-- <ion-row>
+      <ion-col>
+          <ion-button>Reciept <br> Download</ion-button>
+      </ion-col>
+      <ion-col>
+          <ion-button>Contact to <br> Administration</ion-button>
+      </ion-col>
+  </ion-row> -->
+</ion-content>

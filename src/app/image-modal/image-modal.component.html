@@ -1,0 +1,42 @@
+<ion-content>
+  <ion-item class="close-fake" lines="none" class="ion-text-center" color="primary">
+      <ion-button (click)="close()" fill="clear" color="light">
+          <ion-icon name="arrow-back" slot="start"></ion-icon>
+          Back
+      </ion-button>
+  </ion-item>
+
+  <ion-grid>
+    <div style="margin-top: 150px;">
+      <img [src]="imageURL">
+    </div>
+    <ion-row>
+      <ion-col size="2">
+        <ion-button (click)="slidePrev(poss)" fill="clear" color="primary">
+          <ion-icon name="chevron-back-outline" slot="start" ></ion-icon>
+      </ion-button>
+      </ion-col>
+      <ion-col size="8" >
+        <div class="ion-text-center" style="margin-top: 10px;">
+          {{date}}
+        </div>
+      </ion-col>
+      <ion-col size="2">
+        <ion-button (click)="slideNext(poss)" fill="clear" color="primary">
+          <ion-icon name="chevron-forward-outline" slot="start"></ion-icon>
+      </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid> 
+
+  <!-- <ion-slides [options]="sliderOpts" #slider>
+      <ion-slide *ngFor="let photo of galleryphotoArr">
+          <div class="swiper-zoom-container">
+              <img [src]="photo.getUrl()">
+          </div>
+      </ion-slide>
+  </ion-slides> -->
+  <!-- <ion-slide *ngFor="let photos of galleryphotoArr">
+    <img [src]="photos.getUrl()">
+  </ion-slide> -->
+</ion-content>

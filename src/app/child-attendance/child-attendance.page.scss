@@ -1,0 +1,27 @@
+:root {
+    --ion-safe-area-top: 20px;
+    --ion-safe-area-bottom: 22px;
+}
+
+#Absent{
+    border: solid 1px #3880ff;
+    padding: 10px;
+}
+
+#Present{
+    background-color: #2c810a;
+}
+
+#holiday {
+    background-color: #eb9a82;
+}
+
+#Leave {
+    background-color: #00BCEB;
+}
+#halfDay{
+   background-color: #00BCEB; 
+}
+.attendanceFont{
+    font-family:"dmSans";
+}

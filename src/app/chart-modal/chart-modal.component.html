@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-button color="light" (click)="dismissModal()">
+              <ion-icon name="arrow-back"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+      <ion-title>
+          Message
+      </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+      <ion-row>
+          <ion-col size="9"  class="message other-message">
+              <b>{{message.getMessageSubject()}}</b><br>
+              <span>{{message.getMessageBody()}}</span>
+              <div class="time" text-right><br> {{message.getDate()}}
+              </div>
+          </ion-col>
+
+          <!-- <ion-col offset="3" size="9" *ngIf="currentUser === message.user" class="message my-meage">
+              <b>{{message.user}}</b><br>
+              <span>{{message.msg}}</span>
+              <div class="time" text-right><br> {{message.createdAt | date:'short'}}
+              </div>
+          </ion-col> -->
+      </ion-row>
+  </ion-grid>
+</ion-content>

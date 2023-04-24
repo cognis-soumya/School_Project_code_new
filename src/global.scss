@@ -1,0 +1,86 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+
+/* Core CSS required for Ionic components to work properly */
+
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+// .my-custom-class {
+//     --backdrop-opacity: 0.2;
+//     --background: linear-gradient(90deg, rgba(165, 255, 192, 1) 1%, rgba(0, 212, 255, 1) 100%);
+// }
+
+
+// font montserrat
+@font-face{
+    font-family:'Roboto_Mono';
+    src: url('./assets/fonts/Roboto_Mono/RobotoMono-Regular.ttf');
+}
+@font-face{
+    font-family:'Roboto_Monos';
+    src: url('./assets/fonts/Roboto_Mono/RobotoMono-Medium.ttf');
+}
+
+
+
+// font Roboto
+@font-face{
+    font-family:'Roboto';
+    src: url('./assets/fonts/Roboto/Roboto-Regular.ttf')
+}
+@font-face{
+    font-family:'Robotos';
+    src: url('./assets/fonts/Roboto/Roboto-Medium.ttf')
+}
+
+
+
+ion-item > ion-label {
+     font-family:"Roboto_Mono";
+}
+ion-note{
+   font-family:"Roboto_Mono"; 
+}
+h3{
+   font-family:"Roboto_Mono";  
+}
+ion-select{
+    font-family:"Roboto_Mono";
+}
+ion-row > ion-col{
+    font-family:"Roboto_Mono";
+}
+
+ion-label{
+    font-family:"Roboto_Mono";
+}
+ion-title{
+    font-family:"Roboto_Monos";
+}
+ion-grid > ion-row >ion-col{
+  font-family:"Roboto_Monos";  
+}

@@ -1,0 +1,14 @@
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let child of childDataArr">
+      <ion-label>{{child.studentName}}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-item line="none" detail="false" button (click)="dismiss()">
+    Cancel
+  </ion-item>
+</ion-content>
+
+
+
+

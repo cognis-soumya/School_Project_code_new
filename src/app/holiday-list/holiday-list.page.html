@@ -1,0 +1,71 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-button color="light" (click)="goBack()">
+                <ion-icon name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>Holiday List</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <!-- <ion-item>
+      <ion-label position="floating">Date</ion-label>
+      <ion-datetime displayFormat="YYYY/MM/DD" [(ngModel)]="fromDate" (ionChange)="fromDateChange(this.fromDate)"></ion-datetime>
+  </ion-item> -->
+    <ion-item>
+        <ion-label>From Date</ion-label>
+        <ion-icon name="calendar" color="primary" slot="end"></ion-icon>
+        <ion-datetime displayFormat="DD-MM-YYYY" [(ngModel)]="fromDate" (ionChange)="fromDateChange(this.fromDate)"  locale="en-GB"></ion-datetime> <!--[min] ="minDate" [max]="maxDate"-->
+    </ion-item>
+    <ion-item>
+        <ion-label>To Date</ion-label>
+        <ion-icon name="calendar" color="primary" slot="end"></ion-icon>
+        <ion-datetime displayFormat="DD-MM-YYYY" [(ngModel)]="todate" (ionChange)="toDateChange(this.todate)" [min] ="minDate" [max]="maxDate"></ion-datetime>
+    </ion-item>
+    <ion-button color="primary" expand="block" (click)="showHoliday()">Show holidays</ion-button>
+
+    <div>
+        <ion-item>
+            <ion-label>Total no of holidays</ion-label>
+            <ion-badge slot="end">{{totalNoOfHoliday}}</ion-badge>
+        </ion-item>
+        <ion-list *ngFor="let holiday of holidayDataArr">
+            <ion-item>
+
+                
+                <ion-label color="primary">{{holiday.getHolidayDatefromDate()}} to {{holiday.getHolidaytoDate()}} </ion-label>
+                <ion-label color="primary" >{{holiday.getNameOfHoliday()}}</ion-label>
+
+                <!-- <div>
+                     <p>{{holiday.getNameOfHoliday()}}</p>
+                    <p>29-03-2021</p> 
+                     {{holiday.getHolidayDate()}} 
+                </div> -->
+            </ion-item>
+        </ion-list>
+    </div>
+
+
+
+    <!-- <ion-item>
+      <ion-label>Type of Holiday</ion-label>
+      <ion-select value="genesis">
+          <ion-select>
+              <ion-select-option value="genesis">Public Holiday</ion-select-option>
+              <ion-select-option value="saturn">School Holiday</ion-select-option>
+          </ion-select>
+      </ion-select>
+  </ion-item>
+  <ion-item>
+      <ion-label position="floating">Name of Holiday</ion-label>
+      <ion-textarea></ion-textarea>
+  </ion-item>
+  <ion-item>
+      <ion-label position="floating">Notes</ion-label>
+      <ion-textarea></ion-textarea>
+  </ion-item> -->
+
+
+</ion-content>

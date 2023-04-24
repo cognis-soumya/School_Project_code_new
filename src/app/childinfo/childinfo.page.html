@@ -1,0 +1,72 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-button color="light" (click)="goBack()">
+                <ion-icon name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>Child Info</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-label>Child Name</ion-label>
+            <ion-note slot="end" color="primary">{{childName}}</ion-note>
+            <!-- <ion-note *ngIf="childDataArr.length === 1" slot="end" color="primary">{{childName}}</ion-note> -->
+            <!-- <ion-select okText="Ok" cancelText="Cancel" (ionChange)="selectChild($event)">
+                <ion-select-option *ngFor="let child of childDataArr">{{child.getStudentName()}}</ion-select-option>
+            </ion-select> -->
+        </ion-item>
+        <ion-item>
+            <ion-label> Regd No</ion-label>
+            <ion-note slot="end" color="primary">{{rollNo}}</ion-note>
+        </ion-item>
+        <ion-item>
+            <ion-label>Class </ion-label>
+            <ion-note slot="end" color="primary">{{classes}}</ion-note>
+        </ion-item>
+        <ion-item>
+            <ion-label> Section</ion-label>
+            <ion-note slot="end" color="primary">{{section}}</ion-note>
+        </ion-item>
+
+        <ion-item-group>
+            <ion-item-divider>
+                <ion-label color="primary"> Class Teacher Information</ion-label>
+            </ion-item-divider>
+
+            <ion-item>
+                <ion-label>
+                    <ion-icon name="person-outline" color="primary"></ion-icon>
+                    {{teacherName}}</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label>
+                    <ion-icon name="call" color="primary"></ion-icon>
+                    {{teacherPhone}}</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label>
+                    <ion-icon name="mail-outline" color="primary"></ion-icon>
+                    {{teacherEmail}}</ion-label>
+            </ion-item>
+        </ion-item-group>
+        <ion-item-group>
+            <ion-item-divider>
+                <ion-label color="primary">School Info</ion-label>
+            </ion-item-divider>
+            <ion-item>
+                <ion-label>
+                    <ion-icon name="call" color="primary"></ion-icon>
+                    {{schoolPhone}}</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label>
+                    <ion-icon name="mail-outline" color="primary"></ion-icon>
+                    {{schoolEmail}}</ion-label>
+            </ion-item>
+        </ion-item-group>
+    </ion-list>
+</ion-content>

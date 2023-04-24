@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-button color="light" (click)="goBack()">
+              <ion-icon name="arrow-back"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+      <ion-title> Daily Classes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+      <ion-label>Child Name</ion-label>
+      <ion-note slot="end" color="primary">{{childName}}</ion-note>
+      <!-- <ion-select okText="Ok" cancelText="Dismiss" (ionChange)="selectChild($event)">
+          <ion-select-option *ngFor="let child of childDataArr">{{child.getStudentName()}}</ion-select-option>
+      </ion-select> -->
+  </ion-item>
+  <ion-item>
+      <ion-label>Select day</ion-label>
+      <ion-select okText="Ok" cancelText="Dismiss" (ionChange)="selectDay($event)">
+          <ion-select-option *ngFor="let day of dayList">{{day.dayName}}</ion-select-option>
+      </ion-select>
+  </ion-item>
+  <!-- <ion-item>
+      <ngx-datatable>
+          <ngx-datatable-column name="Date "></ngx-datatable-column>
+          <ngx-datatable-column name="Teacher Name "></ngx-datatable-column>
+          <ngx-datatable-column name="Subject "></ngx-datatable-column>
+          <ngx-datatable-column name="Start Time "></ngx-datatable-column>
+          <ngx-datatable-column name="End Time "></ngx-datatable-column>
+      </ngx-datatable>
+  </ion-item> -->
+  
+      <ion-grid>
+          <ion-row>
+              <ion-col class="bgcolor ion-text-center" size="4">Subject</ion-col>
+              <ion-col class="bgcolor ion-text-center" size="4">Teacher</ion-col>
+              <ion-col class="bgcolor ion-text-center" size="2">Start</ion-col>
+              <ion-col class="bgcolor ion-text-center" size="2">End</ion-col>
+          </ion-row>
+          <ion-row *ngFor="let dailyClass of dailyClassArr">
+              <ion-col class="ion-text-center" size="4"> {{ dailyClass.getSubjectName() }}</ion-col>
+              <ion-col class="ion-text-center" size="4"> {{ dailyClass.getTeacherName() }}</ion-col>
+              <ion-col class="ion-text-center" size="2"> {{ dailyClass.getStartTime() }}</ion-col>
+              <ion-col class="ion-text-center" size="2"> {{ dailyClass.getEndTime() }}</ion-col>
+          </ion-row>
+      </ion-grid>
+</ion-content>

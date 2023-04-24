@@ -1,0 +1,69 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-button color="light" (click)="goBack()">
+                <ion-icon name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>Exam Result</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label>Child Name</ion-label>
+        <ion-note slot="end" color="primary">{{childName}}</ion-note>
+        <!-- <ion-select okText="Ok" cancelText="Cancel" (ionChange)="selectChild($event)">
+            <ion-select-option *ngFor="let child of childDataArr">{{child.getStudentName()}}</ion-select-option>
+        </ion-select> -->
+    </ion-item>
+    <ion-item>
+        <ion-label>Select Exam</ion-label>
+        <ion-select okText="Ok" cancelText="Cancel" (ionChange)="selectExamType($event)">
+            <ion-select-option *ngFor="let exam of examTypeArr">{{exam.getExamType()}}</ion-select-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Year</ion-label>
+        <ion-select okText="Ok" cancelText="Cancel" (ionChange)="selectYear($event)">
+            <ion-select-option *ngFor="let year of years">{{year.yearName}}</ion-select-option>
+        </ion-select>
+     </ion-item> 
+     <ion-button color="primary" expand="block"  (click)="getExamResultFinal()" >Show Result</ion-button>
+    <ion-grid>
+        <ion-row>
+            <ion-col class="bgcolor ion-text-center" size="3">Subject</ion-col>
+            <ion-col class="bgcolor ion-text-center" size="3">Total Marks</ion-col>
+            <ion-col class="bgcolor ion-text-center" size="3">Pass Marks</ion-col>
+            <ion-col class="bgcolor ion-text-center" size="3">Scored Marks</ion-col>
+        </ion-row>
+        <ion-row *ngFor="let result of examResultArr">
+            <ion-col class="ion-text-center" size="3"> {{ result.getSubjectName()}}</ion-col>
+            <ion-col class="ion-text-center" size="3"> {{ result.getTotalMarks()}}</ion-col>
+            <ion-col class="ion-text-center" size="3"> {{ result.getPassmarks()}}</ion-col>
+            <ion-col class="ion-text-center" size="3"> {{ result.getScoredMarks()}}</ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <ion-item>
+        <ion-label>Exam Total Marks</ion-label>
+        <ion-note slot="end" color="primary">{{totalMarks}}</ion-note>
+    </ion-item>
+    <ion-item>
+        <ion-label> Marks scored</ion-label>
+        <ion-note slot="end" color="primary">{{scoredMarks}}</ion-note>
+    </ion-item>
+    <ion-item>
+        <ion-label>Percentage scored</ion-label>
+        <ion-note slot="end" color="primary">{{percentage}}</ion-note>
+    </ion-item>
+    <ion-item>
+        <ion-label>Grade</ion-label>
+        <ion-note slot="end" color="primary">{{grade}}</ion-note>
+    </ion-item>
+    <!-- <ion-item>
+      <ion-label>Final Result</ion-label>
+      <ion-note slot="end " color="primary ">PASS</ion-note>
+  </ion-item> -->
+</ion-content>

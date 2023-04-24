@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-button color="light" (click)="goBack()">
+              <ion-icon name="arrow-back"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+      <ion-title>Gallery</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <div *ngFor="let caption of galleryCaptionArr">
+      <p>{{caption.getCaption()}}</p>
+        <ion-row>
+          <ion-col *ngFor="let photo of galleryPhotoArr" size="3">
+              <a>
+                <img [src]="photo.url" (click)="openPreview(photo)">
+                <ion-note slot="center">{{photo.getDate()}}</ion-note>
+              </a>
+          </ion-col>
+      </ion-row>
+    </div>
+  </ion-grid>
+  <!-- For Sport -->
+  
+
+</ion-content>

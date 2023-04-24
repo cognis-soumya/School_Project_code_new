@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-button color="light" (click)="goBack()">
+              <ion-icon name="arrow-back"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+      <ion-title>Syllabus</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+      <ion-item>
+          <ion-label>Child Name</ion-label>
+          <ion-note slot="end" color="primary">{{childName}}</ion-note>
+          <!-- <ion-select okText="Ok" cancelText="Dismiss" (ionChange)="selectChild($event)">
+              <ion-select-option *ngFor="let child of childDataArr">{{child.getStudentName()}}</ion-select-option>
+          </ion-select>  -->
+      </ion-item>
+      <!-- <ion-item>
+          <ion-label>Subject Name</ion-label>
+          <ion-select value="0">
+              <ion-select-option value="0">All</ion-select-option>
+              <ion-select-option value="1">Math</ion-select-option>
+              <ion-select-option value="2">Computer</ion-select-option>
+              <ion-select-option value="3">English</ion-select-option>
+              <ion-select-option value="4">Science</ion-select-option>
+              <ion-select-option value="5">History</ion-select-option>
+              <ion-select-option value="6">Geography</ion-select-option>
+          </ion-select>
+      </ion-item> -->
+      <!-- <ion-item-group>
+          <ion-item-divider>
+              <ion-label color="primary">Subject Details</ion-label>
+          </ion-item-divider>
+
+          <ion-item>
+              <ion-label>Subject Headert</ion-label>
+              <ion-note slot="end" color="primary"></ion-note>
+          </ion-item>
+          <ion-item>
+              <ion-label>Subject Containt</ion-label>
+              <ion-note slot="end" color="primary"></ion-note>
+          </ion-item>
+
+      </ion-item-group> -->
+          <ion-grid>
+              <ion-row>
+                  <ion-col class="bgcolor ion-text-center" size="6">Subject</ion-col>
+                  <ion-col  class="bgcolor ion-text-center" size="6">Download</ion-col>
+              </ion-row>
+              <ion-row *ngFor="let syllabus of syllabusDetailsArr">
+                  <ion-col size="6" class="ion-text-center">{{syllabus.getSubjectName()}} </ion-col>
+                  <ion-col size="6" class="ion-text-center">
+                      <button class="primary" name="download" color="primary " (click)="downloadPdf(syllabus.getSubjectURL(),syllabus.getSubjectName())">Download</button>
+                  </ion-col>
+              </ion-row>
+          </ion-grid>
+  </ion-list>
+</ion-content>

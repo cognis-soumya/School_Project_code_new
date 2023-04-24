@@ -1,0 +1,53 @@
+<!-- <ion-app> -->
+  <!-- <ion-router-outlet></ion-router-outlet> -->
+<!-- </ion-app> -->
+<!--  -->
+<ion-app>
+    <ion-menu menuId="main-menu" content-id="main">
+        <ion-header>
+            <ion-toolbar color="primary">
+                <ion-title>Menu</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content>
+            <ion-list>
+                <ion-menu-toggle id="header">
+                    <ion-item>
+                        <img src="assets/img/dashboard/user.png">
+                    </ion-item>
+                    <ion-item>
+                        <h1>Abhay Sinha</h1>
+                    </ion-item>
+                </ion-menu-toggle>
+                <ion-menu-toggle>
+                <ion-item >
+                    <ion-icon name="mail" slot="start"></ion-icon>
+                    <ion-label>Inbox</ion-label>
+                </ion-item>
+                </ion-menu-toggle>
+                <ion-item>
+                    <ion-icon name="paper-plane" slot="start"></ion-icon>
+                    <ion-label>Outbox</ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-icon name="heart" slot="start"></ion-icon>
+                    <ion-label>Archived</ion-label>
+                </ion-item>
+                <ion-menu-toggle >
+                <ion-item routerLink="/home">
+                    <ion-icon name="log-out" slot="start"></ion-icon>
+                    <ion-label>Logout</ion-label>
+                </ion-item>
+                </ion-menu-toggle>
+            </ion-list>
+            <ion-footer>
+                <ion-toolbar color="primary" class="ion-text-center">
+                    Powered By: Cognis
+                </ion-toolbar>
+            </ion-footer>
+        </ion-content>
+
+    </ion-menu>
+    <ion-router-outlet id="main"></ion-router-outlet>
+
+</ion-app>

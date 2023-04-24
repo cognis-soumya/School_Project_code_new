@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-button color="light" (click)="goBack()">
+                <ion-icon name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>Assignment</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label>Child Name</ion-label>
+        <ion-note slot="end" color="primary">{{childName}}</ion-note>
+        <!-- <ion-select okText="Ok" cancelText="Cancel" (ionChange)="selectChild($event)">
+            <ion-select-option *ngFor="let child of childDataArr">{{child.getStudentName()}}</ion-select-option>
+        </ion-select> -->
+    </ion-item>
+    <ion-item>
+        <ion-label>Subject Name</ion-label>
+        <ion-select okText="Ok" cancelText="Cancel" (ionChange)="selectSubject($event)">
+            <ion-select-option *ngFor="let subject of subjectDetailsArr">{{subject.getSubjectName()}}</ion-select-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label>Assigned Date</ion-label>
+        <ion-note slot="end" color="primary">{{assignmentStartDate}}</ion-note>
+    </ion-item>
+    <ion-item>
+        <ion-label>Completion Date</ion-label>
+        <ion-note slot="end" color="primary">{{assignmentCompleateDate}}</ion-note>
+    </ion-item>
+    <ion-item>
+        <ion-label>Completion Status</ion-label>
+        <ion-note slot="end" color="danger">{{assignmentStatus}}</ion-note>
+    </ion-item>
+    <!-- <ion-item> -->
+    <!-- <ion-label color="primary" position="floating">{{assignmentTitle}}</ion-label> -->
+    <!-- <ion-textarea></ion-textarea> -->
+    <!-- </ion-item> -->
+
+
+</ion-content>

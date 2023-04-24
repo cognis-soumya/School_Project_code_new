@@ -1,0 +1,50 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar color="primary">
+        <ion-title></ion-title>
+        <ion-buttons slot="start">
+            <ion-button (click)="goBack()">
+                <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div style="margin-top: 80px;">
+        <div *ngFor='let child of childDataArr; let i = index' style="margin-top: 50px;">
+            <!-- <p class="p1">{{childTag + (i+1)}}</p>
+
+            <div class="border">
+                <div id="headers">
+                    <img [src]='child.getImageUrl()' (click)="child1(child)">
+                    <h1>{{child.getStudentName()}}</h1>
+                </div>
+
+            </div> -->
+
+            <ion-card class="border">
+                <ion-card-header>
+                  <ion-card-title class="p1">{{childTag + (i+1)}}</ion-card-title>
+                </ion-card-header>
+              
+                <ion-card-content>
+                    <!-- <div class="border"> -->
+                        <div id="headers">
+                            <!-- <img [src]='child.getImageUrl()' (click)="child1(child)"> -->
+                            <img src="assets/img/dashboard/user.png"(click)="child1(child)">
+                            <h1>{{child.getStudentName()}}</h1>
+                        </div>
+        
+                    <!-- </div> -->
+                </ion-card-content>
+              </ion-card>
+
+        </div>
+    </div>
+
+    <!-- <div id="headers">
+      <img src="assets/img/dashboard/user.jpg">
+      <h1>Rohan Sha</h1>
+  </div> -->
+
+</ion-content>
